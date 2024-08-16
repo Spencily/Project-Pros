@@ -18,24 +18,37 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="{% static 'css/base.css' %}">
-    {% block css %}{% endblock %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 </head>
 
 <body>
     <header>
         <div class="container-fluid g-0 flex-wrap">
-            <div class="row g-0">
-                <div class="col-md-10 header">
-                    <h1>Project Pros</h1>
-                </div>
-                <div class="col-md-2">
-                    <ul class="nav flex-md-column">
-                        <li>NAV goes here</li>
+            <nav class="navbar navbar-expand-lg navigation">
+                <a class="navbar-brand" href="#">
+                    <h1 id="logo">&lt<span class="logo-highlight">Pro</span>ject <span class="logo-highlight">Pro</span>/&gt</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">Disabled</a>
+                        </li>
                     </ul>
                 </div>
-            </div>
+            </nav>
         </div>
     </header>
 
@@ -50,12 +63,20 @@
     {% endif %}
 
     <main>
-        {% block content %}{% endblock %}
+        {% block content %}
+        <!-- page content -->
+        {% endblock %}
     </main>
 
     <footer>
+        <div class="row text-center m-0">
+            <div class="col"><a href=""><i class="fa-brands fa-facebook"></i></a></div>
+            <div class="col"><a href=""><i class="fa-brands fa-x-twitter"></i></a></div>
+            <div class="col"><a href=""><i class="fa-brands fa-linkedin"></i></a></div>
+            <div class="col"><a href=""><i class="fa-brands fa-youtube"></i></a></div>
+        </div>
         <div class="copyright">
-            <p>&copy; 2024 Project Pros</p>
+            <p>&copy; 2024 Project Pro</p>
         </div>
     </footer>
 
@@ -64,6 +85,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/c70f25e1b1.js" crossorigin="anonymous"></script>
 
 </body>
 
