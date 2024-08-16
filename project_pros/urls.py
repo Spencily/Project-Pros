@@ -22,4 +22,6 @@ urlpatterns = [
     path('', include('project.urls')),
     path('', include('top_tips.urls')),
     path("accounts/", include("allauth.urls")),
+    path('', include('top_tips.urls')),
+
 ]
