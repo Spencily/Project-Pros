@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Top Tips for Junior Developers</title>
+    
+    <!-- Include any CSS files here -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+    {% block extra_head %}
+    <!-- Any additional head content can be added here -->
+    {% endblock %}
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{% static 'images/logo.png' %}" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'register' %}">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content">
+            <h1>Top Tips for Junior Developers</h1>
+            <p>Whether you're just starting out or looking to improve your skills, these tips are essential for any junior developer:</p>
+            <ul>
+                <li><strong>Understand the basics of version control:</strong> Learn Git and how to collaborate with others using platforms like GitHub.</li>
+                <li><strong>Write clean, readable code:</strong> Follow best practices, such as meaningful naming conventions and proper indentation, to make your code easier to read and maintain.</li>
+                <li><strong>Don’t be afraid to ask questions:</strong> Seeking help when you’re stuck is a vital part of learning. Engage with communities and don’t hesitate to ask for guidance.</li>
+                <li><strong>Learn how to debug your code:</strong> Knowing how to troubleshoot and resolve issues is crucial. Practice debugging techniques and use tools like debuggers and logging.</li>
+                <li><strong>Practice, practice, practice:</strong> The more you code, the better you’ll get. Build small projects, participate in coding challenges, and continuously refine your skills.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Django App. All rights reserved.</p>
+        <div class="footer-links">
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'admin:index' %}">Admin Access</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Include any JS files here -->
+    <script src="{% static 'js/main.js' %}"></script>
+    {% block extra_js %}
+    <!-- Any additional JavaScript can be added here -->
+    {% endblock %}
+</body>
+</html>
