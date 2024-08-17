@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
+/* General */
+body {
+    background-color: rgb(178, 224, 239);
+}
+
+.hidden {
+    display: none;
+}
+
 /* Header */
 .header {
     display: flex;
@@ -17,18 +26,39 @@
 }
 
 .navigation {
-    background-color: rgb(178, 224, 239);
+    background-color: whitesmoke;
+    box-shadow: 0 0 20px 0 black;
 }
 
 #logo {
     font-family: 'Source Code Pro', sans-serif;
     margin-left: 10px;
+    padding: 10px;
+    margin-bottom: 0;
 }
 
-.logo-highlight {
+.logo-highlight-one {
     color: #5e17eb;
 }
 
+
+.logo-highlight-two {
+    background-color: #5e17eb;
+    color:whitesmoke;
+    border-radius: 5px;
+    padding: 0 5px;
+}
+
+.navbar-toggler {
+    border: 0;
+    background-color: #5e17eb;
+    margin-right: 20px;
+}
+
+.fa-bars {
+    color: whitesmoke;
+    font-size: 140%;
+}
 /* sign up page */
 
 
@@ -55,6 +85,20 @@ footer i {
 }
 
 /* Media Query */
+@media screen and (max-width: 576px) {
+    .logo-sm {
+        display: inline-block;
+        margin-left: 10px;
+        padding: 10px;
+        margin-bottom: 0;
+    }
+
+    #logo {
+        display: none;
+    }
+
+}
+
 @media screen and (max-width: 767px) {
     .nav {
         justify-content: center;
