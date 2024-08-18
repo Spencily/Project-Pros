@@ -214,6 +214,16 @@ svg#freepik_stories-code-typing.animated #freepik--speech-bubbles--inject-6 {ani
     text-align: center;
 }
 
+/* home styling */
+.hero-text {
+    background-color: rgb(178, 224, 239);
+    border-radius: 15px;
+    margin: -15px auto 50px;
+    max-width: 80%;
+    padding: 5rem;
+    text-align: center;
+}
+
 /* Footer */
 #footer-spacer {
     height: 101px;

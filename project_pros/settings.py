@@ -35,7 +35,8 @@ ALLOWED_HOSTS = [
     ".herokuapp.com",
     "8000-spencily-projectpros-82irmzq4haa.ws.codeinstitute-ide.net",
     '8000-spencily-projectpros-482oar3zlxw.ws.codeinstitute-ide.net',
-]
+    '8000-spencily-projectpros-zw7v14agpb9.ws.codeinstitute-ide.net',
+    "localhost"]
 
 
 # Application definition
