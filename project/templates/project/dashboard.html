@@ -5,7 +5,7 @@
 {% if user.is_authenticated %}
 <div class="container-fluid">
     <div class="row mt-2 justify-content-center">
-        <div class="col-sm-6 col-md-5 col-lg-4">
+        <div class="col-sm-6 col-md-5">
             <div class="row ms-1" id="profile-container">
                 <div class="col-12" id="profile-image">
                     <img src="{% static 'images/profile-placeholder.jpg' %}" alt="generic profile image">
@@ -49,15 +49,20 @@
                         <div class="project-info" style="display: none">
                             <p>{{ project.summary }}</p>
                             <p>Collaborators: {{ project.collaborators }}</p>
-                            <a href="{{ project.deployed_site }}" target="_blank" data-bs-toggle="tooltip" data-bs-title="Deployed Site"><i class="fa-solid fa-computer-mouse"></i></a>
-                            <a href="{{ project.github_repo }}" target="_blank" data-bs-toggle="tooltip" data-bs-title="Github Repository"><i class="fa-brands fa-github"></i></a>
+                            <div class="row">
+                                <div class="col p-0"><img src="{% static 'images/website-image-placeholder.jpg' %}" alt="generic website image"></div>
+                                <div class="col p-0">
+                                    <a href="{{ project.deployed_site }}" target="_blank" data-bs-toggle="tooltip" data-bs-title="Deployed Site"><i class="fa-solid fa-computer-mouse"></i></a>
+                                    <a href="{{ project.github_repo }}" target="_blank" data-bs-toggle="tooltip" data-bs-title="Github Repository"><i class="fa-brands fa-github"></i></a>
+                                </div>
+                            </div>
                             <p>{{ project.reflections }}</p>
                         </div>
                     </div>
                 {% endfor %}
             </div>
         </div>
-        <div class="col-sm-6 col-md-5 col-lg-4">
+        <div class="col-sm-6 col-md-5">
             <div class="row mt-5">
                 <div class="col text-center">
                     <h2>Emoji Customisation</h2>
