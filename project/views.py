@@ -11,8 +11,14 @@ def dashboard_content(request):
 
     projects = project_detail.objects.all().order_by("-favourite")
 
+    search = request.GET.get("project-search")
+    search_results = project_detail.objects.filter(title__icontains=search).values() if search != None else ''
+
     return render(
         request,
         'project/dashboard.html',
-        {'projects' : projects},
+        {
+            'projects' : projects,
+            'search_results' : search_results,
+        },
     )

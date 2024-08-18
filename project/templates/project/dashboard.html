@@ -5,7 +5,7 @@
 {% if user.is_authenticated %}
 <div class="container-fluid">
     <div class="row mt-2 justify-content-center">
-        <div class="col-sm-6 col-md-5">
+        <div class="col-sm-6 col-md-5" id="dashboard-section-one">
             <div class="row ms-1" id="profile-container">
                 <div class="col-12" id="profile-image">
                     <img src="{% static 'images/profile-placeholder.jpg' %}" alt="generic profile image">
@@ -17,7 +17,7 @@
             <div class="row mt-3 ms-1" id="toolsbar-container">
                 <div class="col-7 p-0" id="search-bar">
                     <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Projects" aria-label="Search">
+                        <input class="form-control me-2" type="search" placeholder="Projects" aria-label="Search" name="project-search">
                         <button class="btn btn-outline-success me-2" type="submit">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
@@ -36,6 +36,7 @@
                 </div>
             </div>
             <div class="row mt-3" id="project-list">
+                {% if search_results == '' %}
                 {% for project in projects %}
                     <div class="col-2">
                         {% if project.favourite == True %}
@@ -60,10 +61,36 @@
                         </div>
                     </div>
                 {% endfor %}
+                {% else %}
+                {% for result in search_results %}
+                <div class="col-2">
+                    {% if result.favourite == True %}
+                    <i class="fa-solid fa-star"></i>
+                    {% else %}
+                    <i class="fa-regular fa-star"></i>
+                    {% endif %}
+                </div>
+                <div class="col-10">
+                    <h5> {{ result.title}} </h5>
+                    <div class="project-info" style="display: none">
+                        <p>{{ resultsummary }}</p>
+                        <p>Collaborators: {{ result.collaborators }}</p>
+                        <div class="row">
+                            <div class="col p-0"><img src="{% static 'images/website-image-placeholder.jpg' %}" alt="generic website image"></div>
+                            <div class="col p-0">
+                                <a href="{{ project.deployed_site }}" target="_blank" data-bs-toggle="tooltip" data-bs-title="Deployed Site"><i class="fa-solid fa-computer-mouse"></i></a>
+                                <a href="{{ project.github_repo }}" target="_blank" data-bs-toggle="tooltip" data-bs-title="Github Repository"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                        <p>{{ result.reflections }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+                {% endif %}
             </div>
         </div>
         <div class="col-sm-6 col-md-5">
-            <div class="row mt-5">
+            <div class="row mt-5" id="dashboard-section-two">
                 <div class="col text-center">
                     <h2>Emoji Customisation</h2>
                     <p>Choose how viewers engage with your projects</p>
@@ -78,10 +105,10 @@
                     </div>
                 </div>
             </div>
-            <div class="row text-center gx-2 mt-3 mb-5">
+            <div class="row text-center gx-2 mt-3 mb-5" id="dashboard-section-three">
                 <h3>Overview</h3>
                 <div class="col mt-3">
-                    <div class="overview-box p-1">
+                    <div class="p-1">
                         <h5>Projects Added</h5>
                         <p> 
                             5
@@ -89,13 +116,13 @@
                     </div>
                 </div>
                 <div class="col mt-3">
-                    <div class="overview-box p-1">
+                    <div class="p-1">
                         <h5>Awaiting Approval</h5>
                         <p>1</p>
                     </div>
                 </div>
                 <div class="col mt-3">
-                    <div class="overview-box p-1">
+                    <div class="p-1">
                         <h5>Total Engagment</h5>
                         <p>12</p>
                     </div>
