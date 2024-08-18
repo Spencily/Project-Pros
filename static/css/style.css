@@ -82,6 +82,16 @@ body {
 /* sign up page */
 
 /* Dashboard */
+
+/* /* #dashboard-section-one,
+#dashboard-section-two, */
+#dashboard-section-three {
+    background-color: rgb(243, 230, 119);
+    border-radius: 15px;
+    border: 4px solid black; 
+    padding: 10px;
+}
+
 #profile-image {
     margin-top: 20px;
     display:flex;
@@ -175,11 +185,6 @@ body {
     color: whitesmoke;
     background-color: #5e17eb;
     border-radius:50%;
-}
-
-.overview-box {
-    border: 2px solid #5e17eb;
-    border-radius: 5px;
 }
 
 /* Footer */
