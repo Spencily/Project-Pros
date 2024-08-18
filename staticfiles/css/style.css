@@ -26,6 +26,16 @@
     width: 100%;
 }
 
+/* home styling */
+.hero-text {
+    background-color: rgb(178, 224, 239);
+    border-radius: 15px;
+    margin: -15px auto 50px;
+    max-width: 80%;
+    padding: 5rem;
+    text-align: center;
+}
+
 /* Footer */
 footer {
     position: sticky;

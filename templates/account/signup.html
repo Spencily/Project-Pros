@@ -6,9 +6,9 @@
 
 {% block content %}
 <div class="d-flex justify-content-center align-items-center min-vh-100">
-    <div class="signup-box p-4">
+    <div class="signup-box p-4" style="background-color: rgb(178, 224, 239); border: 5px solid #5e17eb; border-radius: 10px;">
         <h1 class="text-center">{% trans "Sign Up" %}</h1>
-        <p class="text-center">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
+        <p class="text-center">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}" style="color: #5e17eb; text-decoration: none;">sign in</a>.{% endblocktrans %}</p>
         <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
             {% csrf_token %}
             {{ form.as_p }}
@@ -16,7 +16,7 @@
             <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
             {% endif %}
             <div class="text-center">
-                <button type="submit" class="btn btn-primary mt-3">{% trans "Sign Up" %} &raquo;</button>
+                <button type="submit" class="btn btn-primary mt-3" style="background-color: #5e17eb; border-color: #5e17eb; color: white;">{% trans "Sign Up" %} &raquo;</button>
             </div>
         </form>
     </div>

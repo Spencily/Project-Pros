@@ -33,7 +33,7 @@ DEBUG = os.environ.get("DEBUG", "") == "1"
 
 ALLOWED_HOSTS = [
     ".herokuapp.com",
-    '8000-spencily-projectpros-34qcevql8z0.ws.codeinstitute-ide.net',
+    '8000-spencily-projectpros-zw7v14agpb9.ws.codeinstitute-ide.net',
     "localhost"]
 
 
