@@ -1,10 +1,26 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block css %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/project.css' %}">
-{% endblock %}
-
 {% block content %}
-
+{% for project in projects %}
+<div class="row justify-content-center mt-5">
+        <div class="col-10">
+            <h5> {{ project.title}} </h5>
+            <div class="project-info">
+                <div class="row justify-content-center">
+                    <div class="col-sm-8"><p>{{ project.summary }}</p></div>
+                    <div class="col-sm-4">
+                        <img src="{% static 'images/website-image-placeholder.jpg' %}" alt="generic website image">
+                        <a href="{{ project.deployed_site }}" target="_blank" data-bs-toggle="tooltip" data-bs-title="Deployed Site"><i class="fa-solid fa-computer-mouse"></i></a>
+                        <a href="{{ project.github_repo }}" target="_blank" data-bs-toggle="tooltip" data-bs-title="Github Repository"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                    <p>Developer: {{ project.account }}</p>
+                    <p>Collaborators: {{ project.collaborators }}</p>
+                    <p>{{ project.reflections }}</p>
+                </div>
+            </div>
+        </div>
+</div>
+{% endfor %}
 {% endblock %} 

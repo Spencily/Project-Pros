@@ -4,9 +4,17 @@ from .models import project_detail
 from .forms import EmojiSelection
 
 # Create your views here.
+
 class ProjectView(View):
     def get(self, request):
-        return render(request, "project/project.html")
+        approved_projects = project_detail.objects.filter(approved=True)
+
+        return render(
+            request, 
+            "project/project.html",
+            {'projects':approved_projects}
+        )
+
 
 def dashboard_content(request):
 
