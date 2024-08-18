@@ -1,7 +1,21 @@
  {% extends "base.html" %}
 {% load static %}
+{% block title %} Home{% endblock %}
 
 {% block content %}
+
+<div class="container-fluid p-0">
+    <img src="" alt="heroimage">
+</div>
+<div class="hero-box p-5 text-center text-black" style="border-radius: 15px; background-color: rgb(178, 224, 239);">
+    <div class="hero-box-content">
+        <h1 class="display-4">Welcome to Our Community</h1>
+        <p class="lead">Celebrating a job well done on your coding project with like-minded community members starts today.</p>
+        <p class="lead">Check out our app, a place where you can have your hard work applauded, share tips to help others, and meet new people to collaborate with on upcoming projects.</p>
+        <p class="lead mt-4">To get started, click the link below:</p>
+        <a href="{% url 'account_signup' %}" class="btn btn-primary mt-3" style="background-color: #5e17eb; color: white;">Sign Up Now</a>
+    </div>
+</div>
 {% for project in projects %}
 <div class="row justify-content-center mt-5">
         <div class="col-10">
