@@ -129,6 +129,32 @@ body {
     border-color: #5e17eb;
 }
 
+.project-info a {
+    padding-top: 30px;
+}
+
+.project-info i {
+    font-size: 50px;
+    padding: 5px;
+}
+
+.fa-github {
+    color: black;
+}
+
+.fa-github:hover {
+    color: black;
+}
+
+.fa-computer-mouse{
+    color: #5e17eb;
+}
+
+.fa-star {
+    font-size: 25px;
+    color: #5e17eb;
+}
+
 #emojis-container {
     font-size: 50px;
     color: #5e17eb;
