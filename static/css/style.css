@@ -138,6 +138,13 @@ body {
     padding: 5px;
 }
 
+.project-info img {
+    object-fit: cover;
+    width: 140px;
+    height: 100px;
+    padding: 10px;
+}
+
 .fa-github {
     color: black;
 }
