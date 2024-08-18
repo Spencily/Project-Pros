@@ -37,13 +37,22 @@
             </div>
             <div class="row mt-3" id="project-list">
                 {% for project in projects %}
-                    <h5>{{ project.title}} </h5>
-                    <div class="hidden" id="project-info">
-                        <p>{{ project.summary }}</p>
-                        <p>Collaborators: {{ project.collaborators }}</p>
-                        <a href="{{ project.deployed_site }}" target="_blank">depolyed</a>
-                        <a href="{{ project.github_repo }}" target="_blank">github</a>
-                        <p>{{ project.reflections }}</p>
+                    <div class="col-2">
+                        {% if project.favourite == True %}
+                        <i class="fa-solid fa-star"></i>
+                        {% else %}
+                        <i class="fa-regular fa-star"></i>
+                        {% endif %}
+                    </div>
+                    <div class="col-10">
+                        <h5> {{ project.title}} </h5>
+                        <div class="project-info" style="display: none">
+                            <p>{{ project.summary }}</p>
+                            <p>Collaborators: {{ project.collaborators }}</p>
+                            <a href="{{ project.deployed_site }}" target="_blank" data-bs-toggle="tooltip" data-bs-title="Deployed Site"><i class="fa-solid fa-computer-mouse"></i></a>
+                            <a href="{{ project.github_repo }}" target="_blank" data-bs-toggle="tooltip" data-bs-title="Github Repository"><i class="fa-brands fa-github"></i></a>
+                            <p>{{ project.reflections }}</p>
+                        </div>
                     </div>
                 {% endfor %}
             </div>
