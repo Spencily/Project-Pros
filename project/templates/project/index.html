@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %} Home{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid p-0">
+    <img src="" alt="heroimage">
+</div>
+<div class="hero-text p-5">
+    <h1 class="display-4">Welcome to Our Community</h1>
+    <p class="lead">Celebrating a job well done on your coding project with like-minded community members starts today.</p>
+    <p class="lead">Check out our app, a place where you can have your hard work applauded, share tips to help others, and meet new people to collaborate with on upcoming projects.</p>
+    <a href="{% url 'signup' %}" class="btn btn-primary btn-lg mt-4">Get Started</a>
+</div>
