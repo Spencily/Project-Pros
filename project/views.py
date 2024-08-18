@@ -9,7 +9,7 @@ class ProjectView(View):
 
 def dashboard_content(request):
 
-    projects = project_detail.objects.all()
+    projects = project_detail.objects.all().order_by("-favourite")
 
     return render(
         request,
