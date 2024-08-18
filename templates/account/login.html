@@ -7,21 +7,19 @@
 
 {% block content %}
 <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
-    <div class="row w-100 justify-content-center">
-        <div class="col-md-6">
-            <h3 class="text-center">{% trans "Sign In" %}</h3>
-            <p class="text-center">{% blocktrans %}Welcome back to <span class="logo-highlight">Pro</span>ject <span class="logo-highlight">Pro</span>. To add a project or like another project, please log in. If you have not created an account yet, then <a class="link" href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
-            <form class="login" method="POST" action="{% url 'account_login' %}">
-                {% csrf_token %}
-                {{ form.as_p }}
-                {% if redirect_field_value %}
-                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-                {% endif %}
-                <div class="d-grid">
-                    <button class="btn btn-signup btn-primary" type="submit">{% trans "Sign In" %}</button>
-                </div>
-            </form>
-        </div>
+    <div class="signup-box p-4" style="background-color: rgb(178, 224, 239); border: 7px solid #5e17eb; border-radius: 10px;">
+        <h3 class="text-center">{% trans "Sign In" %}</h3>
+        <p class="text-center">{% blocktrans %}Welcome back to <span class="logo-highlight">Pro</span>ject <span class="logo-highlight">Pro</span>. To add a project or like another project, please log in. If you have not created an account yet, then <a class="link-signup" href="{{ signup_url }}" style=" color: #5e17eb; text-decoration: none;">sign up</a> first.{% endblocktrans %}</p>
+        <form class="login" method="POST" action="{% url 'account_login' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            {% if redirect_field_value %}
+            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+            {% endif %}
+            <div class="text-center mt-3">
+                <button class="btn btn-primary" type="submit" style="background-color: #5e17eb; border-color: #5e17eb; color: white;">{% trans "Sign In" %} &raquo;</button>
+            </div>
+        </form>
     </div>
 </div>
   
