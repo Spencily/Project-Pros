@@ -35,7 +35,18 @@
                     </div>
                 </div>
             </div>
-            <div class="row ms-1" id="project-list"></div>
+            <div class="row mt-3" id="project-list">
+                {% for project in projects %}
+                    <h5>{{ project.title}} </h5>
+                    <div class="hidden" id="project-info">
+                        <p>{{ project.summary }}</p>
+                        <p>Collaborators: {{ project.collaborators }}</p>
+                        <a href="{{ project.deployed_site }}" target="_blank">depolyed</a>
+                        <a href="{{ project.github_repo }}" target="_blank">github</a>
+                        <p>{{ project.reflections }}</p>
+                    </div>
+                {% endfor %}
+            </div>
         </div>
         <div class="col-sm-6 col-md-5 col-lg-4">
             <div class="row mt-5">
@@ -58,7 +69,9 @@
                 <div class="col mt-3">
                     <div class="overview-box p-1">
                         <h5>Projects Added</h5>
-                        <p>5</p>
+                        <p> 
+                            5
+                        </p>
                     </div>
                 </div>
                 <div class="col mt-3">
