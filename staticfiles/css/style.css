@@ -177,12 +177,19 @@ body {
     color: #5e17eb;
 }
 
-.signup-box {
-    background-color: rgb(178, 224, 239);
-    border: 1px solid #5e17eb;
-    border-radius: 8px;
-    max-width: 400px;
-    width: 100%;
+#emojis-container i{
+    padding: 10px;
+}
+
+#emojis-container i:hover{
+    color: whitesmoke;
+    background-color: #5e17eb;
+    border-radius:50%;
+}
+
+.overview-box {
+    border: 2px solid #5e17eb;
+    border-radius: 5px;
 }
 
 #emojis-container i{
