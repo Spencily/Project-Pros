@@ -4,6 +4,7 @@
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
 {% url 'project' as project_url %}
+{% url 'dashboard' as dashboard_url %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -40,6 +41,9 @@
                             <a class="nav-link {% if request.path == '/' %}is_active{% endif %}" href="{% url 'project' %}">Home <span class="sr-only">(current)</span></a>
                         </li>
                         {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == dashboard_url %}is_active{% endif %}" aria-current="page" href="{% url 'dashboard' %}">Dashboard</a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link {% if request.path == logout_url %}is_active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
                         </li>
