@@ -1,5 +1,5 @@
 from django import forms
-from .models import project_detail
+from .models import project_detail, emoji
 
 class project_detailForm(forms.ModelForm):
     class Meta:
@@ -36,3 +36,8 @@ class project_detailForm(forms.ModelForm):
                 'class': 'form-check-input',
             }),
         }
+
+class EmojiSelection(forms.ModelForm):
+    class Meta:
+        model = emoji
+        fields = ['fontawesome_classname',]

@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class project_detail(models.Model):
-    account = models.ForeignKey(User, on_delete=models.CASCADE, name="project_details")
+    account = models.ForeignKey(User, on_delete=models.CASCADE, name="account")
     title = models.CharField(max_length=120)
     # featured_image = CloudinaryField('image', default='placeholder')
     summary = models.CharField(max_length=500)
@@ -21,12 +21,20 @@ class project_detail(models.Model):
     def __str__(self):
         return f"{self.title}"
 
+fontawesome = [
+    ('fa-regular fa-thumbs-up', 'thumbs-up'),
+    ('fa-regular fa-heart', 'heart'),
+    ('fa-regular fa-face-smile', 'face-smile'),
+    ('fa-regular fa-face-grin-stars', 'face-grin-stars'),
+    ('fa-regular fa-regular fa-face-grin-hearts', 'face-grin-hearts'),
+    ('fa-regular fa-face-grin-beam', 'face-grin-beam'),
+    ('', 'unselected')
+]
 
 class emoji(models.Model):
-    name = models.CharField(max_length=60)
-    # emoji_image = CloudinaryField('image', default='placeholder')
+    fontawesome_classname = models.CharField(max_length=50, choices=fontawesome, default='')
     engagement = models.IntegerField(default = 0)
-    project = models.ForeignKey(project_detail, on_delete=models.CASCADE, name="emojis")
+    account = models.ForeignKey(User, on_delete=models.CASCADE, name="account", default='')
     
     def __str__(self):
-        return f"{self.name}"
+        return f"{self.fontawesome_classname}"

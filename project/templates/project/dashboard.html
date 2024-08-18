@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load crispy_forms_tags %}
 
 {% block content %}
 {% if user.is_authenticated %}
@@ -94,6 +95,9 @@
                 <div class="col text-center">
                     <h2>Emoji Customisation</h2>
                     <p>Choose how viewers engage with your projects</p>
+                    <div class="col">
+                        {{ emoji_form | crispy }}
+                        {% csrf_token %}
                     <div class="col" id="emojis-container">
                         <i class="fa-regular fa-thumbs-up"></i>
                         <i class="fa-regular fa-heart"></i>
