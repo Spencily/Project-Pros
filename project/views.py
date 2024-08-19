@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views import View
 from .models import project_detail
-from .forms import EmojiSelection
+from .forms import EmojiSelection, project_detailForm
 
 # Create your views here.
 
@@ -49,3 +49,13 @@ def dashboard_content(request):
             'emoji_form' : emoji_form,
         },
     )
+
+
+def project_create_view(request):
+    if request.method == 'POST':
+        form = project_detailForm(request.POST)
+        if form.is_valid():
+            return redirect('dashboard') 
+    else:
+        form = project_detailForm()
+    return render (request, 'add.html', {'form':form})

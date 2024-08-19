@@ -68,16 +68,14 @@ To get the minimum viable product we created a kanban board on github and listed
 # WIREFRAMES
 All wireframes were created using Balsamiq.
 
-<img src="doc-assets/screenshots/Balsamiqwireframe1.png" width="100%" height="100%">
-<img src="doc-assets/screenshots/Balsamiqwireframe2.png" width="100%" height="100%">
-<img src="doc-assets/screenshots/Balsamiqwireframe3.png" width="100%" height="100%">
+<img src="doc-assets/screenshots/balsamiq image.png" width="100%" height="100%">
 
 # FEATURES
 
 # Home Page
 # Navigation bar: 
 
-<img src="doc-assets/screenshots/navbarimage.png" width="100%" height="100%">
+<img src="doc-assets/screenshots/navbar image.png" width="100%" height="100%">
 
 The navigation bar appears on every page allowing users to easily navigate through the site.
 Navigation bar has links for 'Home', 'Logout' and 'Login/Register'.
@@ -86,15 +84,15 @@ The navbar is responsive, collapsing into a toggle menu for medium and small scr
 
 # Login Page: 
 
-<img src="doc-assets/screenshots/signinimage.png" width="100%" height="100%">
+<img src="doc-assets/screenshots/signin page.png" width="100%" height="100%">
 
 The login page takes users to a new page where they can login to their account to add or update existing todo items, or if they have not registered find a link to register before logging in.
 
 # Logout Page
 
-<img src="doc-assets/screenshots/signoutimage.png" width="100%" height="100%">
+<img src="doc-assets/screenshots/signout page.png" width="100%" height="100%">
 
-This page confirms if the user wants to logout of their account which covers any instance where the user made a mistake in clicking the signout button.
+This page confirms if the user wants to logout of their account which covers any instance where the user made a mistake in clicking the signout button. 
 
 # FOOTER
 
@@ -104,22 +102,17 @@ The footer page shows the social media icons where users can click and redirects
 
 # Project Page
 
-<img src="doc-assets/screenshots/todolistimage.png" width="100%" height="100%">
+<img src="doc-assets/screenshots/project page.png" width="100%" height="100%">
 
 The project page has features such as title to add the name of the project, spaces to add the deployed link and github repo, checklist to add favourite, emoji for users to show some love for the project.
 
 # Structure
 This website is made of two apps: The Project App which handles the functions linked to adding the project, and another app for the tips.
 
-All Diagrams were created using Lucidchart
-
-# User Flow Diagram
-
-<img src="doc-assets/screenshots/Userflowchart.png" width="100%" height="100%">
 
 # Database Schema
 
-<img src="doc-assets/screenshots/ERD Diagram.png" width="100%" height="100%">
+<img src="doc-assets/screenshots/erd image.png" width="100%" height="100%">
 
 # Technology Stack
 
@@ -275,5 +268,7 @@ Make sure to resolve any deployment errors by adjusting the code as necessary.
 # Credits and Acknowledgement
 
 Code Institute Walkthrough Project
+
+Code recycling from individual full stack project.
 
 Team mates for always volunteering to pick up any tasks to get this done.
