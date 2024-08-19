@@ -34,7 +34,8 @@ DEBUG = os.environ.get("DEBUG", "") == "1"
 ALLOWED_HOSTS = [
     ".herokuapp.com",
     '8000-spencily-projectpros-zw7v14agpb9.ws.codeinstitute-ide.net',
-    "localhost"]
+    '8000-spencily-projectpros-482oar3zlxw.ws.codeinstitute-ide.net',
+]
 
 
 # Application definition
@@ -50,12 +51,17 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'crispy_forms',
+    'crispy_bootstrap5',
     "project",
 ]
 
 SITE_ID = 1
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/dashboard/'
 LOGOUT_REDIRECT_URL = '/'
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",

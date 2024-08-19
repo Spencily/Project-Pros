@@ -1,20 +1,26 @@
  {% extends "base.html" %}
 {% load static %}
-{% block title %} Home{% endblock %}
 
 {% block content %}
-
-<div class="container-fluid p-0">
-    <img src="" alt="heroimage">
+{% for project in projects %}
+<div class="row justify-content-center mt-5">
+        <div class="col-10">
+            <h5> {{ project.title}} </h5>
+            <div class="project-info">
+                <div class="row justify-content-center">
+                    <div class="col-sm-8"><p>{{ project.summary }}</p></div>
+                    <div class="col-sm-4">
+                        <img src="{% static 'images/website-image-placeholder.jpg' %}" alt="generic website image">
+                        <a href="{{ project.deployed_site }}" target="_blank" data-bs-toggle="tooltip" data-bs-title="Deployed Site"><i class="fa-solid fa-computer-mouse"></i></a>
+                        <a href="{{ project.github_repo }}" target="_blank" data-bs-toggle="tooltip" data-bs-title="Github Repository"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                    <p>Developer: {{ project.account }}</p>
+                    <p>Collaborators: {{ project.collaborators }}</p>
+                    <p>{{ project.reflections }}</p>
+                </div>
+            </div>
+        </div>
 </div>
-<div class="hero-box p-5 text-center text-black" style="border-radius: 15px; background-color: rgb(178, 224, 239);">
-    <div class="hero-box-content">
-        <h1 class="display-4">Welcome to Our Community</h1>
-        <p class="lead">Celebrating a job well done on your coding project with like-minded community members starts today.</p>
-        <p class="lead">Check out our app, a place where you can have your hard work applauded, share tips to help others, and meet new people to collaborate with on upcoming projects.</p>
-        <p class="lead mt-4">To get started, click the link below:</p>
-        <a href="{% url 'account_signup' %}" class="btn btn-primary mt-3" style="background-color: #5e17eb; color: white;">Sign Up Now</a>
-    </div>
-</div>
-
+{% endfor %}
 {% endblock %}
