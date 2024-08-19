@@ -15,6 +15,14 @@ class ProjectView(View):
             {'projects':approved_projects}
         )
 
+class HomeView(View):
+    def get(self, request):
+
+        return render(
+            request, 
+            "project/index.html",
+        )
+
 
 def dashboard_content(request):
 
