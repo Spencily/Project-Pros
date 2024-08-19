@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="mb-4">Top Tips</h1>
+    
+    <!-- Loop over each tip in the context and display it -->
+    <ul class="list-group">
+        {% for tip in tips %}
+            <li class="list-group-item mb-3">
+                <h2>{{ tip.title }}</h2>
+                <p>{{ tip.content }}</p>
+                <small class="text-muted">by {{ tip.author.username }} on {{ tip.date_added|date:"F d, Y H:i" }}</small>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
