@@ -187,9 +187,21 @@ body {
     border-radius:50%;
 }
 
-.overview-box {
-    border: 2px solid #5e17eb;
-    border-radius: 5px;
+/* Projects page */
+svg#freepik_stories-code-typing:not(.animated) .animable {opacity: 0;}
+svg#freepik_stories-code-typing.animated #freepik--speech-bubbles--inject-6 {animation: 1.5s Infinite  linear floating;animation-delay: 0s;}            
+@keyframes floating {                
+    0% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }                
+    100% {                    
+        opacity: 1;                    
+        transform: translateY(0px);                
+    }            
 }
 
 #emojis-container i{
