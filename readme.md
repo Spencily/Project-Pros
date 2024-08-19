@@ -92,7 +92,7 @@ The login page takes users to a new page where they can login to their account t
 
 <img src="doc-assets/screenshots/signout page.png" width="100%" height="100%">
 
-This page confirms if the user wants to logout of their account which covers any instance where the user made a mistake in clicking the signout button.
+This page confirms if the user wants to logout of their account which covers any instance where the user made a mistake in clicking the signout button. 
 
 # FOOTER
 
